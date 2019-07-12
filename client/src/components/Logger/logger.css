@@ -1,0 +1,19 @@
+.meal-logger {
+    /* width: 25%; */
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+
+    padding: 3px 0;
+}
+
+.log-number {
+    width: 60px;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: flex-end;
+}
