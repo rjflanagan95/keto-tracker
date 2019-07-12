@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import "./main.css"
 
 import Logger from "../Logger/logger";
+import Graphs from "../Graphs/graphs";
 
 class Main extends Component {
   constructor(props) {
@@ -15,7 +17,16 @@ class Main extends Component {
   render() {
 
     return (
-      <Logger />
+      <Container>
+        <Row>
+          <Col xs={8}>
+            <Graphs />
+          </Col>
+          <Col xs={4}>
+            <Logger />
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }
