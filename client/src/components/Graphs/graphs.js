@@ -8,16 +8,21 @@ class Graphs extends Component {
     super(props)
 
     this.state = {
-      data: [300, 50, 100],
       meals: this.props.meals,
 
       proteinCalories: 0,
       fatCalories: 0,
       carbCalories: 0,
+      totalCalories: 0,
 
     }
     
     this.renderGraph = this.renderGraph.bind(this);
+  }
+
+  componentDidMount() {
+    this.renderGraph();
+    setInterval(this.renderGraph, 1000);
   }
 
   changeUserInput(target) {
@@ -27,19 +32,23 @@ class Graphs extends Component {
   }
 
   renderGraph() {
-    let calProtein, calFat, calCarbs, totalCal;
+    let calProtein = this.state.proteinCalories;
+    let calFat = this.state.fatCalories;
+    let calCarbs = this.state.carbCalories;
+    let totalCal = this.state.totalCalories;
 
     for (let i = 0; i < this.state.meals.length; i++) {
-      calProtein += this.state.meals[i].protein * 4;
-      calFat += this.state.meals[i].fat * 9;
-      calCarbs += this.state.meals[i].carbs * 4;
-      totalCal += this.state.meals[i].calories;
+      calProtein += parseInt(this.state.meals[i].protein) * 4;
+      calFat += parseInt(this.state.meals[i].fat) * 9;
+      calCarbs += parseInt(this.state.meals[i].carbs) * 4;
+      totalCal += parseInt(this.state.meals[i].calories);
     }
 
     this.setState({
       proteinCalories: calProtein,
       fatCalories: calFat,
-      carbCalories: calCarbs
+      carbCalories: calCarbs,
+      totalCalories: totalCal
     });
   }
 
@@ -51,7 +60,6 @@ class Graphs extends Component {
             'Fat'
         ],
         datasets: [{
-            // data: this.state.data,
             data: [this.state.proteinCalories, this.state.carbCalories, this.state.fatCalories],
             backgroundColor: [
             '#FF6384',
@@ -71,22 +79,29 @@ class Graphs extends Component {
       <div className="panel graph-panel">
         <Container>
           <Row>
-            <Col xs={3}>
+            <Col xs={4}>
+              <h5>Overview</h5>
+              <div>
+                <div>Total Calories: {this.state.totalCalories}</div>
+                <div>Calories from Protein: {this.state.proteinCalories}</div>
+                <div>Calories from Fat: {this.state.fatCalories}</div>
+                <div>Calories from Carbs: {this.state.carbCalories}</div>
+              </div>
               <h5>Today's Meals</h5>
               <div className="food-list">
                 {this.state.meals.map((val, index) =>
-                <div key={index}>
+                <div className="food-item" key={index}>
                   <h6>{val.food}</h6>
-                  <p>{val.mealType} - {val.mealDate}</p>
-                  <p>Calories: {val.calories}</p>
-                  <p>Protein: {val.protein}g</p>
-                  <p>Fat: {val.fat}g</p>
-                  <p>Carbs: {val.carbs}g</p>
+                  <div>{val.mealType} - {val.mealDate}</div>
+                  <div>Calories: {val.calories}</div>
+                  <div>Protein: {val.protein}g</div>
+                  <div>Fat: {val.fat}g</div>
+                  <div>Carbs: {val.carbs}g</div>
                 </div>
                 )}
               </div>
             </Col>
-            <Col xs={9}>
+            <Col xs={8}>
               <Doughnut data={data} />
             </Col>
           </Row>
