@@ -19,8 +19,6 @@ class Main extends Component {
     newMeals.push(data);
     this.setState({
       meals: newMeals
-    }, function() {
-      console.log(this.state.meals);
     });
   }
 

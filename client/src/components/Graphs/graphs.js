@@ -32,11 +32,6 @@ class Graphs extends Component {
   }
 
   renderGraph() {
-    console.log(this.state);
-    // let calProtein = this.state.proteinCalories;
-    // let calFat = this.state.fatCalories;
-    // let calCarbs = this.state.carbCalories;
-    // let totalCal = this.state.totalCalories;
     let calProtein = 0;
     let calFat = 0;
     let calCarbs = 0;
