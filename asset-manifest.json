@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/keto-tracker/static/css/main.295b0d0a.chunk.css",
+    "main.js": "/keto-tracker/static/js/main.38ee6dae.chunk.js",
+    "main.js.map": "/keto-tracker/static/js/main.38ee6dae.chunk.js.map",
+    "runtime~main.js": "/keto-tracker/static/js/runtime~main.882d317a.js",
+    "runtime~main.js.map": "/keto-tracker/static/js/runtime~main.882d317a.js.map",
+    "static/js/2.b7226e5f.chunk.js": "/keto-tracker/static/js/2.b7226e5f.chunk.js",
+    "static/js/2.b7226e5f.chunk.js.map": "/keto-tracker/static/js/2.b7226e5f.chunk.js.map",
+    "index.html": "/keto-tracker/index.html",
+    "precache-manifest.1163af198705147c6f54e2f7653e268c.js": "/keto-tracker/precache-manifest.1163af198705147c6f54e2f7653e268c.js",
+    "service-worker.js": "/keto-tracker/service-worker.js",
+    "static/css/main.295b0d0a.chunk.css.map": "/keto-tracker/static/css/main.295b0d0a.chunk.css.map"
+  }
+}
