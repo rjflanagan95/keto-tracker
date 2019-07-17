@@ -12,11 +12,15 @@
 .food-item {
     background: #F4FFFD;
     border-radius: 8px;
-    /* border: 2px solid #F9DC5C; */
+    border: 2px solid #F4FFFD;
     padding: 5px;
 
     font-size: small;
     color: #011936;
+}
+
+.food-item:hover {
+    border: 2px solid #F9DC5C;
 }
 
 .food-item-title {

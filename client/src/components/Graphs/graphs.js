@@ -64,14 +64,14 @@ class Graphs extends Component {
         datasets: [{
             data: [this.state.proteinCalories, this.state.carbCalories, this.state.fatCalories],
             backgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
+            '#011936',
+            '#F9DC5C',
+            '#A63D40'
             ],
             hoverBackgroundColor: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
+            '#2F425A',
+            '#FBE897',
+            '#B66062'
             ]
         }]
     };

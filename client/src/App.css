@@ -1,5 +1,23 @@
 #root {
-    /* background: #89B6A5; */
-    /* background: #4C3B4D; */
     background: #011936;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.footer a {
+    color: #F4FFFD;
+    font-size: small;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #F9DC5C;
 }
