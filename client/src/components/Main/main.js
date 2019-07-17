@@ -10,8 +10,17 @@ class Main extends Component {
     super(props)
 
     this.state = {
-      
+        meals: []
       }
+  }
+
+  logMeal = (data) => {
+    console.log(data);
+    let newMeals = this.state.meals;
+    newMeals.push(data);
+    this.setState({
+      meals: [newMeals]
+    });
   }
 
   render() {
@@ -20,10 +29,10 @@ class Main extends Component {
       <Container>
         <Row>
           <Col xs={8}>
-            <Graphs />
+            <Graphs meals={this.state.meals} />
           </Col>
           <Col xs={4}>
-            <Logger />
+            <Logger logToMain={this.logMeal} />
           </Col>
         </Row>
       </Container>
