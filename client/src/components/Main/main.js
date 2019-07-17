@@ -15,11 +15,12 @@ class Main extends Component {
   }
 
   logMeal = (data) => {
-    console.log(data);
     let newMeals = this.state.meals;
     newMeals.push(data);
     this.setState({
-      meals: [newMeals]
+      meals: newMeals
+    }, function() {
+      console.log(this.state.meals);
     });
   }
 
