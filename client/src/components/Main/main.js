@@ -25,8 +25,8 @@ class Main extends Component {
   render() {
 
     return (
-      <Container>
-        <Row>
+      <Container className="main-container">
+        <Row className="main-row">
           <Col xs={8}>
             <Graphs meals={this.state.meals} />
           </Col>

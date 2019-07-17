@@ -1,0 +1,28 @@
+.graph-card {
+    /* background: #011936; */
+    background: #F4FFFD;
+    padding: 5px;
+    color: #011936;
+
+    border-radius: 8px;
+    border: 2px solid #011936;
+    margin-bottom: 5px;
+}
+
+.food-item {
+    background: #F4FFFD;
+    border-radius: 8px;
+    /* border: 2px solid #F9DC5C; */
+    padding: 5px;
+
+    font-size: small;
+    color: #011936;
+}
+
+.food-item-title {
+    font-weight: bold;
+}
+
+.food-item-date {
+    font-size: x-small;
+}

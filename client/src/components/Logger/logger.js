@@ -94,7 +94,7 @@ class Logger extends Component {
             </Row>
         </Container>
         <div className="submit-row">
-            <Button variant="primary" className="log-button" onClick={this.submitMeal} >Log Meal</Button>
+            <div className="log-button" onClick={this.submitMeal} >Log Meal</div>
         </div>
       </div>
     );

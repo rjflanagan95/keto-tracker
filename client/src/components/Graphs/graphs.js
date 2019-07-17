@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
+import "./graphs.css";
+
 import { Doughnut } from "react-chartjs-2";
 
 class Graphs extends Component {
@@ -80,19 +82,19 @@ class Graphs extends Component {
         <Container>
           <Row>
             <Col xs={4}>
-              <h5>Overview</h5>
-              <div>
+              <div id="overview" className="graph-card">
+                <div className="title">Overview</div>
                 <div>Total Calories: {this.state.totalCalories}</div>
                 <div>Calories from Protein: {this.state.proteinCalories}</div>
                 <div>Calories from Fat: {this.state.fatCalories}</div>
                 <div>Calories from Carbs: {this.state.carbCalories}</div>
               </div>
-              <h5>Today's Meals</h5>
-              <div className="food-list">
+              <div id="food-list" className="graph-card">
+                <div className="title">Today's Meals</div>
                 {this.state.meals.map((val, index) =>
                 <div className="food-item" key={index}>
-                  <h6>{val.food}</h6>
-                  <div>{val.mealType} - {val.mealDate}</div>
+                  <div className="food-item-title">{val.food}</div>
+                  <div className="food-item-date">{val.mealType} - {val.mealDate}</div>
                   <div>Calories: {val.calories}</div>
                   <div>Protein: {val.protein}g</div>
                   <div>Fat: {val.fat}g</div>
@@ -102,7 +104,9 @@ class Graphs extends Component {
               </div>
             </Col>
             <Col xs={8}>
-              <Doughnut data={data} />
+              <div className="graph-card">
+                <Doughnut data={data} />
+              </div>
             </Col>
           </Row>
         </Container>

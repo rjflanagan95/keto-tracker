@@ -1,5 +1,5 @@
 .meal-logger {
-    /* width: 25%; */
+    font-weight: bold;
 }
 
 .form-row {
@@ -16,4 +16,18 @@
 .submit-row {
     display: flex;
     justify-content: flex-end;
+}
+
+.log-button {
+    background: #F9DC5C;
+    border: 2px solid #011936;
+    border-radius: 10px;
+
+    color: #011936;
+
+    padding: 8px;
+}
+
+.log-button:hover {
+    border: 2px solid #A63D40;
 }
