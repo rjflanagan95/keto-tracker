@@ -77,20 +77,20 @@ class Logger extends Component {
                 </Col>
             </Row>
             <Row className="form-row">
-                <Col xs={left}>Calories:</Col>
-                <Col xs={right}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="calories" value={this.state.calories} type="number" /></Col>
+                <Col xs={6}>Calories:</Col>
+                <Col xs={6}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="calories" value={this.state.calories} type="number" /></Col>
             </Row>
             <Row className="form-row">
-                <Col xs={left}>Protein:</Col>
-                <Col xs={right}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="protein" value={this.state.protein} type="number" /></Col>
+                <Col xs={6}>Protein (grams):</Col>
+                <Col xs={6}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="protein" value={this.state.protein} type="number" /></Col>
             </Row>
             <Row className="form-row">
-                <Col xs={left}>Fat:</Col>
-                <Col xs={right}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="fat" value={this.state.fat} type="number" /></Col>
+                <Col xs={6}>Fat (grams):</Col>
+                <Col xs={6}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="fat" value={this.state.fat} type="number" /></Col>
             </Row>
             <Row className="form-row">
-                <Col xs={left}>Carbs:</Col>
-                <Col xs={right}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="carbs" value={this.state.carbs} type="number" /></Col>
+                <Col xs={6}>Carbs (grams):</Col>
+                <Col xs={6}><Form.Control className="form-input log-number" onChange={(e) => this.changeUserInput(e.target)} name="carbs" value={this.state.carbs} type="number" /></Col>
             </Row>
         </Container>
         <div className="submit-row">
