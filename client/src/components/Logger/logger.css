@@ -9,6 +9,10 @@
     padding: 3px 0;
 }
 
+.form-input {
+    border: 1px solid #151515;
+}
+
 .log-number {
     width: 80px;
 }
