@@ -9,6 +9,11 @@
     margin-bottom: 5px;
 }
 
+.overview-stats {
+    font-size: small;
+    padding: 5px;
+}
+
 .food-item {
     background: #F4FFFD;
     border-radius: 8px;
@@ -28,5 +33,9 @@
 }
 
 .food-item-date {
+    font-size: x-small;
+}
+
+.food-item-details {
     font-size: x-small;
 }

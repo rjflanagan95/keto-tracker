@@ -84,21 +84,25 @@ class Graphs extends Component {
             <Col xs={4}>
               <div id="overview" className="graph-card">
                 <div className="title">Overview</div>
-                <div>Total Calories: {this.state.totalCalories}</div>
-                <div>Calories from Protein: {this.state.proteinCalories}</div>
-                <div>Calories from Fat: {this.state.fatCalories}</div>
-                <div>Calories from Carbs: {this.state.carbCalories}</div>
+                <div className="overview-stats">
+                  <div>Total Calories: {this.state.totalCalories}</div>
+                  <div>Calories from Protein: {this.state.proteinCalories}</div>
+                  <div>Calories from Fat: {this.state.fatCalories}</div>
+                  <div>Calories from Carbs: {this.state.carbCalories}</div>
+                </div>
               </div>
               <div id="food-list" className="graph-card">
                 <div className="title">Today's Meals</div>
                 {this.state.meals.map((val, index) =>
                 <div className="food-item" key={index}>
                   <div className="food-item-title">{val.food}</div>
-                  <div className="food-item-date">{val.mealType} - {val.mealDate}</div>
-                  <div>Calories: {val.calories}</div>
-                  <div>Protein: {val.protein}g</div>
-                  <div>Fat: {val.fat}g</div>
-                  <div>Carbs: {val.carbs}g</div>
+                  <div className="food-item-details">
+                    <div className="food-item-date">{val.mealType} - {val.mealDate}</div>
+                    <div>Calories: {val.calories}</div>
+                    <div>Protein: {val.protein}g</div>
+                    <div>Fat: {val.fat}g</div>
+                    <div>Carbs: {val.carbs}g</div>
+                  </div>
                 </div>
                 )}
               </div>
