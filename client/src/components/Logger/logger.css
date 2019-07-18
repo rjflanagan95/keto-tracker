@@ -1,5 +1,7 @@
 .meal-logger {
     font-weight: bold;
+
+    text-shadow: 2px 2px #011936;
 }
 
 .form-row {
@@ -36,6 +38,8 @@
     color: #011936;
 
     padding: 8px;
+
+    text-shadow: none;
 }
 
 .log-button:hover {
