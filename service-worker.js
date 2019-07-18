@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/keto-tracker/precache-manifest.ff31adcba49b2d2fb70aba1bf4de6ee1.js"
+  "/keto-tracker/precache-manifest.7b648f966304326ed455e19fa4fe59d7.js"
 );
 
 self.addEventListener('message', (event) => {
