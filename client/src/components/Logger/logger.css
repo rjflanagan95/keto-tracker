@@ -13,6 +13,12 @@
     border: 2px solid #011936;
 }
 
+.form-input:focus {
+    outline: none;
+    outline-width: 0;
+    border: 2px solid #F9DC5C;
+}
+
 .log-number {
     width: 80px;
 }
